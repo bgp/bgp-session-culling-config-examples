@@ -1,10 +1,13 @@
 BGP Session Culling Configuration Examples
 ==========================================
 
-Authoring Conventions
+IETF work
 ---------------------
 
-One file per vendor
+This repository serves to complement [draft-iops-grow-bgp-session-culling](https://datatracker.ietf.org/doc/draft-iops-grow-bgp-session-culling/).
+
+The repository contains concise configuration examples for various platforms on
+how to apply Involuntary BGP Session Teardowns across layer-2 fabrics.
 
 Note Well
 ------
