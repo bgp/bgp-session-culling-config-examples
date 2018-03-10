@@ -4,7 +4,7 @@ BGP Session Culling Configuration Examples
 IETF work
 ---------------------
 
-This repository serves to complement [draft-iops-grow-bgp-session-culling](https://datatracker.ietf.org/doc/draft-iops-grow-bgp-session-culling/).
+This repository serves to complement [BCP 214](https://tools.ietf.org/html/rfc8327).
 
 The repository contains concise configuration examples for various platforms on
 how to apply Involuntary BGP Session Teardowns across layer-2 fabrics.
