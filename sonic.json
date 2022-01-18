@@ -1,0 +1,60 @@
+{
+    "ACL_TABLE": {
+        "ACL-IPV4-PERMIT-ALL-EXCEPT-BGP": {
+            "policy_desc": "IXP Participant Affected by Maintenance",
+            "ports": [
+                "Ethernet8"
+            ],
+            "stage": "ingress", 
+            "type": "L3"
+        },
+        "ACL-IPV6-PERMIT-ALL-EXCEPT-BGP": {
+            "policy_desc": "IXP Participant Affected by Maintenance",
+            "ports": [
+                "Ethernet8"
+            ],
+            "stage": "ingress",
+            "type": "L3V6"
+        }
+    }, 
+    "ACL_RULE": {
+        "ACL-IPV4-PERMIT-ALL-EXCEPT-BGP|DENY-DST-BGP": {
+            "PRIORITY": "3",
+            "PACKET_ACTION": "DROP",
+            "SRC_IP": "192.0.2.0/24",
+            "DST_IP": "192.0.2.0/24",
+            "L4_DST_PORT": "179"
+        },
+        "ACL-IPV4-PERMIT-ALL-EXCEPT-BGP|DENY-SRC-BGP": {
+            "PRIORITY": "2",
+            "PACKET_ACTION": "DROP",
+            "SRC_IP": "192.0.2.0/24",
+            "DST_IP": "192.0.2.0/24",
+            "L4_SRC_PORT": "179"
+        },
+        "ACL-IPV4-PERMIT-ALL-EXCEPT-BGP|PERMIT-ANY": {
+            "PRIORITY": "1",
+            "PACKET_ACTION": "FORWARD",
+            "IP_TYPE": "ANY"
+        },
+        "ACL-IPV6-PERMIT-ALL-EXCEPT-BGP|DENY-DST-BGP": {
+            "PRIORITY": "3",
+            "PACKET_ACTION": "DROP",
+            "SRC_IPV6": "2001:db8:2::/64",
+            "DST_IPV6": "2001:db8:2::/64",
+            "L4_DST_PORT": "179"
+        },
+        "ACL-IPV6-PERMIT-ALL-EXCEPT-BGP|DENY-SRC-BGP": {
+            "PRIORITY": "2",
+            "PACKET_ACTION": "DROP",
+            "SRC_IPV6": "2001:db8:2::/64",
+            "DST_IPV6": "2001:db8:2::/64",
+            "L4_SRC_PORT": "179"
+        },
+        "ACL-IPV6-PERMIT-ALL-EXCEPT-BGP|PERMIT-ANY": {
+            "PRIORITY": "1",
+            "PACKET_ACTION": "FORWARD",
+            "IP_TYPE": "ANY"
+        }
+    }
+}
